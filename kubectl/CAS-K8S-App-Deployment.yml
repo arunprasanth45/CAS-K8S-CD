@@ -1,0 +1,23 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: cas-demo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: cas-demo
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: cas-demo
+    spec:
+      containers:
+      - name: cas-demo
+        image: arunprasanth45/cas-k8s-demo:1.0
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: cas-docker-cred   
+        
+        
