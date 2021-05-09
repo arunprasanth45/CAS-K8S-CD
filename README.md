@@ -1,2 +1,1 @@
-# CAS-K8S-CICD-Deployment
-CD demo
+# CAS-K8S-CD
