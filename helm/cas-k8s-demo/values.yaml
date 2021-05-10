@@ -7,8 +7,8 @@ replicaCount: 1
 image:
   repository: arunprasanth45/cas-k8s-demo
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0"
+  # Overrides the image tag from circle CI
+  tag: "TAG_FROM_CIRCLE_CI"
 
 imagePullSecrets: 
   - name: cas-docker-cred
