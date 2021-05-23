@@ -9,7 +9,8 @@ metadata:
     helm.sh/chart: "{{.Chart.Name}}-{{.Chart.Version}}"
   annotations:
     "helm.sh/hook": pre-install
-    "helm.sh/hook-delete-policy": hook-succeeded
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": hook-succeeded  # keep
 spec:
   template:
     metadata:
@@ -26,8 +27,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: URL
-              value: jdbc:postgresql://10.103.236.27:5432/postgresdb
+              value: {{ .Values.db.url }}
             - name: USERNAME
-              value: postgresadmin
+              value: {{ .Values.db.username }}
             - name: PASSWORD
-              value: admin123         
+              value: {{ .Values.db.password }}  

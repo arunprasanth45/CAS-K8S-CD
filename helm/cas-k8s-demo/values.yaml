@@ -68,3 +68,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+db:
+  url: jdbc:postgresql://postgres.default.svc.cluster.local:5432/postgresdb
+  username: postgresadmin
+  password: admin123
