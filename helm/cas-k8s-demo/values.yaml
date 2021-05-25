@@ -11,7 +11,7 @@ image:
     repository: arunprasanth45/cas-k8s-demo-db
   pullPolicy: IfNotPresent
   # Overrides the image tag from circle CI
-  tag: "1.0.0"
+  tag: "1.0.125"
 
 imagePullSecrets: 
   - name: cas-docker-cred
